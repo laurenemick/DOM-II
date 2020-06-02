@@ -35,7 +35,6 @@ function removeInverseOnEsc(event) {
 document.addEventListener("keydown", removeInverseOnEsc);
 
 
-
 //wheel
 const letsGoImg = document.querySelector('.img-content');
 
@@ -48,6 +47,7 @@ function zoom(event){
 
 let scale = 1;
 letsGoImg.addEventListener('wheel', zoom);
+
 
 //click
 const allBtns = document.getElementsByClassName('btn');
@@ -72,6 +72,19 @@ allBtns[0].addEventListener('dblclick', (event) => {
     allBtns[0].classList.toggle('large');
 });
 
+allBtns[1].addEventListener('dblclick', (event) => {
+    allBtns[1].classList.toggle('large');
+});
+
+allBtns[2].addEventListener('dblclick', (event) => {
+    allBtns[2].classList.toggle('large');
+});
+
+const logo = document.querySelector('.logo-heading');
+logo.addEventListener('dblclick', (event) => {
+    logo.classList.toggle('large');
+});
+
 
 const allDestinations = document.querySelectorAll('.destination p');
 
@@ -80,10 +93,12 @@ Array.from(allDestinations).forEach(function(destination) {
 });
 
 
+//mouseover 
+const allH2s = document.querySelectorAll('h2');
 
-
-
-
+Array.from(allH2s).forEach(function(destination) {
+    destination.addEventListener('mouseover', btnOnClick2);
+});
 
 
   
